@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.harry_000.icshop" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CategorySearchActivity"
+            android:label="@string/title_activity_category_search" >
+        </activity>
+        <activity
+            android:name=".BrandListActivity"
+            android:label="@string/title_activity_brand_list"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.harry_000.icshop.MainActivity" />
+        </activity>
+        <activity
+            android:name=".BrandStoresActivity"
+            android:label="@string/title_activity_brand_stores"
+            android:parentActivityName=".BrandListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.harry_000.icshop.BrandListActivity" />
+        </activity>
+        <activity
+            android:name=".StoreDetailActivity"
+            android:label="@string/title_activity_store_detail"
+            android:parentActivityName=".BrandStoresActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.harry_000.icshop.BrandStoresActivity" />
+        </activity>
+
+        <!--
+        activity
+            android:name=".StoresListAdapter"
+            android:label="@string/title_activity_stores_list_adapter" >
+        </activity
+        -->
+        <activity
+            android:name=".CategoryExpandActivity"
+            android:label="@string/title_activity_category_expand" >
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.harry_000.icshop.MainActivity" />
+        </activity>
+
+        <!--
+        activity
+            android:name=".CategoryExpandAdapter"
+            android:label="@string/title_activity_category_expand_adapter" >
+        </activity
+        -->
+
+
+        <!--
+        activity
+            android:name=".SubCategoryListAdapter"
+            android:label="@string/title_activity_sub_category_list_adapter" >
+        </activity
+        -->
+
+        <!--activity
+            android:name=".MainCategoryAdapter"
+            android:label="@string/title_activity_main_category_adapter" >
+        </activity-->
+        <activity
+            android:name=".StoreListActivity"
+            android:label="StoreListActivity"
+           >
+        </activity>
+        <activity android:name=".searchActivity"
+            android:label="searchActivity">
+
+
+
+        </activity>
+
+
+        <activity
+            android:name=".SubCategoryActivity"
+            android:label="@string/title_activity_sub_category" >
+        </activity>
+    </application>
+
+</manifest>

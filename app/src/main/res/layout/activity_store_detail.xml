@@ -1,0 +1,238 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:fillViewport="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- store picture,android:scaleType="fitXY"-->
+
+        <ImageView
+            android:id="@+id/imageview_store"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:maxHeight="150dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/whiterabbit"
+            android:background="#FF99FF"
+            />
+
+        <!-- store name,@+id/textViewStore,android:layout_marginTop="5dp"-->
+        <TextView
+            android:id="@+id/textViewStore"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:gravity="center"
+            android:background="#FE2E64"
+            android:textSize="22sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2.5dp"
+            android:textStyle="bold"
+            />
+        <!-- *********************************************************************** -->
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/image_phicon"
+            android:src="@drawable/phoneicon"
+            android:background="#F5D0A9"
+            android:layout_margin="2.5dp"
+            />
+
+        <!-- store phone#-->
+        <TextView
+            android:id="@+id/textViewPhone"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="left"
+            android:text="Medium Text"
+            android:textSize="15sp"
+            android:background="#F78181"
+            android:layout_toRightOf ="@+id/image_phicon"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            />
+
+        </RelativeLayout>
+        <!-- *********************************************************************** -->
+        <!-- store address-->
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/image_adicon"
+                android:src="@drawable/addressicon"
+                android:background="#F5D0A9"
+                android:alpha="0.4"
+                android:layout_margin="2.5dp"
+                />
+
+            <!--TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Address: "
+                android:gravity="right"
+                android:id="@+id/textAddress"
+                android:layout_marginLeft="0dp"
+                android:textSize="15sp"
+                android:background="#FFBF00"
+                android:paddingLeft="10dp"
+                android:layout_toRightOf="@+id/image_adicon"
+               -->
+
+            <!-- store address-->
+            <TextView
+                android:id="@+id/textViewAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:textSize="15sp"
+                android:background="#81F7D8"
+                android:gravity="center"
+                android:layout_toRightOf ="@+id/image_adicon"
+                />
+
+        </RelativeLayout>
+
+        <!-- *********************************************************************** -->
+
+        <!-- store hours-->
+        <RelativeLayout
+
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/image_hricon"
+                android:src="@drawable/hoursicon"
+                android:layout_margin="2.5dp"
+                android:background="#F5D0A9"
+                />
+
+            <TextView
+                android:id="@+id/textViewHours"
+                android:background="#D8F781"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@+id/image_hricon"
+
+                />
+
+        </RelativeLayout>
+
+        <!-- *********************************************************************** -->
+
+        <!-- store text brand sold-->
+        <RelativeLayout
+
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/image_bicon"
+            android:src="@drawable/brandicon"
+            android:layout_margin="2.5dp"
+            android:background="#F5D0A9"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Brands Sold:"
+            android:id="@+id/textViewBrandLabel"
+            android:textSize="15sp"
+            android:background="#F6CEE3"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/image_bicon"
+            android:layout_margin="10dp"/>
+        </RelativeLayout>
+
+        <!-- *********************************************************************** -->
+
+        <!-- store brandlabel-->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textViewBrands"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="15sp"
+            android:background="#E0F2F7"
+            android:gravity="center"
+            />
+
+        <!-- *********************************************************************** -->
+
+        <!-- text: category-->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Retail Categories Sold:"
+            android:id="@+id/textViewCategoryLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="15sp"
+            android:background="#D0F5A9"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+        <!--category label-->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textViewCategories"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#F3F781"
+            android:textSize="13sp"
+            android:gravity="left"
+            android:padding="10dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

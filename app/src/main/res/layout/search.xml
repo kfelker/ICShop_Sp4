@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    tools:context="com.example.harry_000.icshop.searchActivity"
+    >
+    <!--android:_alignParentTop="True"-->
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/textView"
+        android:layout_marginTop="3dp"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toRightOf="@+id/listIcon"
+        android:layout_toEndOf="@+id/listIcon"
+        android:clickable="true"
+        android:editable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+
+    <RadioGroup
+        android:id="@+id/radiogroup_search"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/view1"
+        android:layout_alignStart="@+id/view1">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brand"
+            android:id="@+id/radioButton_Brand" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Store"
+            android:id="@+id/radioButton_Store"
+            android:layout_marginLeft="50dp" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/button"
+        android:layout_above="@+id/radiogroup_search"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="buttonClick"/>
+
+    <ImageView
+        android:id="@+id/listIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_search"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@android:id/list"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/radiogroup_search"
+        android:layout_alignLeft="@+id/radiogroup_search"
+        android:layout_alignStart="@+id/radiogroup_search"
+        tools:listitem="@android:layout/simple_list_item_1"
+        android:clickable="true"
+        android:background="#ff1a1a"
+        android:drawSelectorOnTop="false"
+        />
+
+
+
+</RelativeLayout>

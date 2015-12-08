@@ -15,6 +15,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+
     public class BrandStoresActivity extends AppCompatActivity {
         private List<Store> Stores = new ArrayList<Store>();
         private MyDatabase db;
@@ -22,10 +23,13 @@ import java.util.List;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+
+
+
             setContentView(R.layout.activity_brand_stores);
 
             Intent i= getIntent();
-            String id = i.getStringExtra("brandID");
+            String brandid = i.getStringExtra("brandID");
             String strBrand = i.getStringExtra("brandName");
 
             //Toast.makeText(getApplicationContext(), id,
@@ -33,7 +37,7 @@ import java.util.List;
 
 
             db = new MyDatabase(this);
-            Stores = db.getStoresByBrand(id); // you would not typically call this on the main thread
+            Stores = db.getStoresByBrand(brandid); // you would not typically call this on the main thread
 
             StoresListAdapter Adapter = new StoresListAdapter(this, Stores);
 
@@ -64,10 +68,10 @@ import java.util.List;
         }
 
         @Override
-        protected void onDestroy() {
+       protected void onDestroy() {
             super.onDestroy();
             db.close();
-        }
+       }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -16,6 +16,8 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp" />
     <TextView
+        android:lines="1"
+        android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/textView"
@@ -76,8 +78,8 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="3dp"
         android:id="@android:id/list"
-        android:layout_marginTop="25dp"
         android:layout_below="@+id/radiogroup_search"
         android:layout_alignLeft="@+id/radiogroup_search"
         android:layout_alignStart="@+id/radiogroup_search"
@@ -85,8 +87,7 @@
         android:clickable="true"
         android:background="#ff1a1a"
         android:drawSelectorOnTop="false"
-        />
-
-
+        android:divider="#FFFFFF"
+        android:dividerHeight="5dp"/>
 
 </RelativeLayout>

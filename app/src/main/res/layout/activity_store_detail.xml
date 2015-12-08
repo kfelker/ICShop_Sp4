@@ -1,229 +1,238 @@
-<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mytabhost"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:fillViewport="false">
 
 
-    <LinearLayout android:id="@+id/LinearLayout01"
-        android:orientation="vertical" android:layout_height="fill_parent"
+    <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mytabhost"
         android:layout_width="fill_parent"
-        android:scrollIndicators="right">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp">
-
-            <!-- store picture,android:scaleType="fitXY"-->
-            <ImageView
-                android:id="@+id/imageview_store"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:maxHeight="150dp"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/bg3"
-                android:background="#FF99FF"
-                />
-
-            <!-- store name,@+id/textViewStore,android:layout_marginTop="5dp"-->
-            <TextView
-                android:id="@+id/textViewStore"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
-                android:background="@android:color/darker_gray"
-                android:textSize="25sp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"
-                android:layout_gravity="bottom"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:textColor="@android:color/black"
-                android:shadowColor="#FFFFFF"
-                android:gravity="center"
-                android:shadowDx="1"
-                android:textStyle="bold"
-                android:shadowDy="2"
-                android:shadowRadius="2"
-                android:alpha="0.8"
-                />
+        android:layout_height="fill_parent" >
 
 
-        </FrameLayout>
-    </LinearLayout>
-    <!-- *********************************************************************** -->
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:divider="?android:dividerHorizontal"
-        android:showDividers="middle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-
-        >
-
-        <!-- store phone#  android:background="#F5D0A9" android:background="#F78181"android:showDividers="middle"-->
-        <RelativeLayout
-            android:layout_height="wrap_content"
+        <LinearLayout android:id="@+id/LinearLayout01"
+            android:orientation="vertical" android:layout_height="fill_parent"
             android:layout_width="fill_parent"
-            android:layout_weight="1"
+            android:scrollIndicators="right">
 
-            >
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/image_phicon"
-                android:src="@drawable/phoneicon"
-                android:layout_margin="2.5dp"
-                />
-
-            <TextView
-                android:id="@+id/textViewPhone"
-                android:layout_width="fill_parent"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:gravity="left"
-                android:text="Medium Text"
-                android:textSize="15sp"
-                android:layout_toRightOf ="@+id/image_phicon"
-                android:layout_height="20dp"
-                android:layout_margin="5dp"
-                />
-
-        </RelativeLayout>
-        <!-- *********************************************************************** -->
-        <!-- store address-->
-        <RelativeLayout
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent"
-            android:layout_weight="1"
-            >
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/image_adicon"
-                android:src="@drawable/addressicon"
-                android:alpha="0.4"
-                android:layout_margin="2.5dp"
-                />
-
-            <!--TextView
-                android:layout_width="wrap_content"
+            <FrameLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Address: "
-                android:gravity="right"
-                android:id="@+id/textAddress"
-                android:layout_marginLeft="0dp"
-                android:textSize="15sp"
-                android:background="#FFBF00"
-                android:paddingLeft="10dp"
-                android:layout_toRightOf="@+id/image_adicon"
-               -->
+                android:layout_marginBottom="5dp">
 
-            <!-- store address-->
-            <TextView
-                android:id="@+id/textViewAddress"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_margin="10dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
-                android:textSize="15sp"
-                android:gravity="center"
-                android:layout_toRightOf ="@+id/image_adicon"
-                />
-
-        </RelativeLayout>
-
-        <!-- *********************************************************************** -->
-        <!-- store hours-->
-        <RelativeLayout
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent"
-            android:layout_weight="1"
-            >
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/image_hricon"
-                android:src="@drawable/hoursicon"
-                android:layout_margin="2.5dp"
-                />
-
-            <TextView
-                android:id="@+id/textViewHours"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
-                android:textSize="13sp"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:layout_toRightOf="@+id/image_hricon"
-                android:layout_margin="10dp"
-
-                />
-
-        </RelativeLayout>
-
-        <TabWidget android:id="@android:id/tabs"
-            android:layout_height="wrap_content" android:layout_width="fill_parent"
-            android:layout_weight="0.9" android:textSize="10sp"
-
-            android:showDividers="middle"
-            android:nestedScrollingEnabled="True"
-            ></TabWidget>
-
-        <FrameLayout android:id="@android:id/tabcontent"
-            android:layout_height="fill_parent" android:layout_width="fill_parent">
-            <LinearLayout android:layout_width="fill_parent"
-                android:layout_height="wrap_content" android:id="@+id/Brands" android:tag="Brands">
-
-                <!-- tab 1 content goes here -->
-                <TextView
+                <!-- store picture,android:scaleType="fitXY"-->
+                <ImageView
+                    android:id="@+id/imageview_store"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Medium Text"
-                    android:id="@+id/textViewBrands"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:textSize="13sp"
-                    android:gravity="left"
-                    android:padding="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:maxHeight="150dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg3"
+                    android:background="#FF99FF"
                     />
 
-            </LinearLayout>
-            <LinearLayout android:layout_width="fill_parent"
-                android:layout_height="wrap_content" android:id="@+id/Categories">
-                <!-- tab 2 content goes here -->
-
+                <!-- store name,@+id/textViewStore,android:layout_marginTop="5dp"-->
                 <TextView
+                    android:id="@+id/textViewStore"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Medium Text"
-                    android:id="@+id/textViewCategories"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
+                    android:background="@android:color/darker_gray"
+                    android:textSize="25sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_gravity="bottom"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@android:color/black"
+                    android:shadowColor="#FFFFFF"
+                    android:gravity="center"
+                    android:shadowDx="1"
+                    android:textStyle="bold"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:alpha="0.8"
+                    />
 
-                    android:textSize="13sp"
+
+            </FrameLayout>
+        </LinearLayout>
+        <!-- *********************************************************************** -->
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:divider="?android:dividerHorizontal"
+            android:showDividers="middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+
+            >
+
+            <!-- store phone#  android:background="#F5D0A9" android:background="#F78181"android:showDividers="middle"-->
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+
+                >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/image_phicon"
+                    android:src="@drawable/phoneicon"
+                    android:layout_margin="2.5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewPhone"
+                    android:layout_width="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:gravity="left"
-                    android:padding="10dp"/>
+                    android:text="Medium Text"
+                    android:textSize="15sp"
+                    android:layout_toRightOf ="@+id/image_phicon"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"
+                    />
 
-            </LinearLayout>
+            </RelativeLayout>
+            <!-- *********************************************************************** -->
+            <!-- store address-->
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                >
 
-        </FrameLayout>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/image_adicon"
+                    android:src="@drawable/addressicon"
+                    android:alpha="0.4"
+                    android:layout_margin="2.5dp"
+                    />
 
-    </LinearLayout>
+                <!--TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Address: "
+                    android:gravity="right"
+                    android:id="@+id/textAddress"
+                    android:layout_marginLeft="0dp"
+                    android:textSize="15sp"
+                    android:background="#FFBF00"
+                    android:paddingLeft="10dp"
+                    android:layout_toRightOf="@+id/image_adicon"
+                   -->
 
-</TabHost>
+                <!-- store address-->
+                <TextView
+                    android:id="@+id/textViewAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_margin="10dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_toRightOf ="@+id/image_adicon"
+                    />
+
+            </RelativeLayout>
+
+            <!-- *********************************************************************** -->
+            <!-- store hours-->
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/image_hricon"
+                    android:src="@drawable/hoursicon"
+                    android:layout_margin="2.5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewHours"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:layout_toRightOf="@+id/image_hricon"
+                    android:layout_margin="10dp"
+
+                    />
+
+            </RelativeLayout>
+
+            <TabWidget android:id="@android:id/tabs"
+                android:layout_height="wrap_content" android:layout_width="fill_parent"
+                android:layout_weight="0.9" android:textSize="10sp"
+
+                android:showDividers="middle"
+                android:nestedScrollingEnabled="True"
+                ></TabWidget>
+
+            <FrameLayout android:id="@android:id/tabcontent"
+                android:layout_height="fill_parent" android:layout_width="fill_parent">
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" android:id="@+id/Brands" android:tag="Brands">
+
+                    <!-- tab 1 content goes here -->
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Medium Text"
+                        android:id="@+id/textViewBrands"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textSize="13sp"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" android:id="@+id/Categories">
+                    <!-- tab 2 content goes here -->
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Medium Text"
+                        android:id="@+id/textViewCategories"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+
+                        android:textSize="13sp"
+                        android:gravity="left"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </TabHost>
+
+</ScrollView>

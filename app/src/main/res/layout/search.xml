@@ -8,6 +8,11 @@
     tools:context="com.example.harry_000.icshop.searchActivity"
     >
     <!--android:_alignParentTop="True"-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+
     <View
         android:id="@+id/view1"
         android:layout_width="match_parent"
@@ -85,9 +90,18 @@
         android:layout_alignStart="@+id/radiogroup_search"
         tools:listitem="@android:layout/simple_list_item_1"
         android:clickable="true"
-        android:background="#ff1a1a"
+        android:background="#909090"
         android:drawSelectorOnTop="false"
         android:divider="#FFFFFF"
-        android:dividerHeight="5dp"/>
+        android:dividerHeight="5dp"
+        android:fastScrollAlwaysVisible="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignTop="@android:id/list"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button" />
 
 </RelativeLayout>

@@ -73,25 +73,41 @@ import java.util.List;
             db.close();
        }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_brand_stores, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        @Override
+        public boolean onCreateOptionsMenu(Menu menu) {
+            // Inflate the menu; this adds items to the action bar if it is present.
+            getMenuInflater().inflate(R.menu.menu_main, menu);
             return true;
         }
 
-        return super.onOptionsItemSelected(item);
-    }
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            // Handle action bar item clicks here. The action bar will
+            // automatically handle clicks on the Home/Up button, so long
+            // as you specify a parent activity in AndroidManifest.xml.
+            switch (item.getItemId()) {
+                case R.id.action_Brand:
+                    //Create Intent for Shopping List Activity
+                    Intent listIntent = new Intent(this, BrandListActivity.class);
+                    //Start Product Activity
+                    startActivity(listIntent);
+                    return true;
+                case R.id.action_Category:
+                    //Create Intent for Product Activity
+                    Intent productIntent = new Intent(this,CategoryExpandActivity.class);
+                    //Start Product Activity
+                    startActivity(productIntent);
+                    return true;
+                case R.id.action_Search:
+                    Intent searchIntent = new Intent(this, searchActivity.class);
+                    startActivity(searchIntent);
+                    return true;
+                case R.id.action_Stores:
+                    Intent storesIntent = new Intent(this, StoreListActivity.class);
+                    startActivity(storesIntent);
+                    return true;
+                default:
+                    return super.onOptionsItemSelected(item);
+            }
+        }
 }

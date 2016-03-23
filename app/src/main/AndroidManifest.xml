@@ -20,8 +20,9 @@
         //all brands
         <activity
             android:name=".BrandListActivity"
-            android:label="@string/title_activity_brand_list"
-            android:parentActivityName=".MainActivity">
+            android:label="@string/title_activity_brand_list">
+            //android:parentActivityName=".MainActivity"
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.harry_000.icshop.MainActivity" />
@@ -29,8 +30,8 @@
         //brand stores
         <activity
             android:name=".BrandStoresActivity"
-            android:label="@string/title_activity_brand_stores"
-            android:parentActivityName=".BrandListActivity">
+            android:label="@string/title_activity_brand_stores">
+            //android:parentActivityName=".BrandListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.harry_000.icshop.BrandListActivity" />
@@ -97,10 +98,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.harry_000.icshop.CategoryExpandActivity" />
         </activity>
-        <activity
-            android:name=".HamburgerMenu"
-            android:label="@string/title_activity_hamburger_menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -8,7 +8,7 @@
     <string name="title_activity_brand_stores">Store Brands</string>
     <string name="title_activity_store_detail">Store Details</string>
     <string name="action_Brand">Brand List</string>
-    <string name="action_Category">category List</string>
+    <string name="action_Category">Category List</string>
     <string name="title_activity_stores_list_adapter">StoresListAdapter</string>
     <string name="title_activity_category_expand">Category</string>
     <string name="title_activity_category_expand_adapter">CategoryExpandAdapter</string>
@@ -24,4 +24,6 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_Stores">Store List</string>
+    <string name="action_Search">Search</string>
 </resources>

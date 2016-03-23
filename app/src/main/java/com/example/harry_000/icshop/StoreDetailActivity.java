@@ -85,14 +85,30 @@ public class StoreDetailActivity extends AppCompatActivity{
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_Brand:
+                //Create Intent for Shopping List Activity
+                Intent listIntent = new Intent(this, BrandListActivity.class);
+                //Start Product Activity
+                startActivity(listIntent);
+                return true;
+            case R.id.action_Category:
+                //Create Intent for Product Activity
+                Intent productIntent = new Intent(this,CategoryExpandActivity.class);
+                //Start Product Activity
+                startActivity(productIntent);
+                return true;
+            case R.id.action_Search:
+                Intent searchIntent = new Intent(this, searchActivity.class);
+                startActivity(searchIntent);
+                return true;
+            case R.id.action_Stores:
+                Intent storesIntent = new Intent(this, StoreListActivity.class);
+                startActivity(storesIntent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
     protected void onDestroy() {

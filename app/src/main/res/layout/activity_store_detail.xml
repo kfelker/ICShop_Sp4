@@ -158,15 +158,15 @@
                 android:layout_weight="1"
                 >
 
-                <ImageView
+                <!--<ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:id="@+id/image_hricon"
                     android:src="@drawable/hoursicon"
                     android:layout_margin="2.5dp"
-                    />
+                    />-->
 
-                <TextView
+                  <!-- <TextView
                     android:id="@+id/textViewHours"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -178,7 +178,8 @@
                     android:layout_toRightOf="@+id/image_hricon"
                     android:layout_margin="10dp"
 
-                    />
+                    /> -->
+
 
             </RelativeLayout>
 
